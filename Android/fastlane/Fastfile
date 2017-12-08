@@ -27,11 +27,11 @@ platform :android do
     increment_version_code(version_code: Time.now.to_i)
 
     # Change application icon to beta version
-    badge(
-      shield: "#{get_version_name}-#{get_version_code}-blue",
-      dark: true,
-      glob: ENV["BADGE_GLOB"]
-    )
+    # badge(
+    #   shield: "#{get_version_name}-#{get_version_code}-blue",
+    #   dark: true,
+    #   glob: ENV["BADGE_GLOB"]
+    # )
 
     # Compile
     gradle(
