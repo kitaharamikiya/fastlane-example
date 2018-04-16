@@ -40,10 +40,10 @@ platform :android do
       build_type: ENV["BETA_GRADLE_BUILD_TYPE"]
     )
 
-    ## Save apk
-    #if is_ci?
-    #  sh "cp #{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]} $CIRCLE_ARTIFACTS"
-    #end
+    # Save apk
+    if is_ci?
+      sh "cp #{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]} $CIRCLE_ARTIFACTS"
+    end
 
     # https://github.com/fastlane/fastlane/issues/6325
     sh("touch changelog.txt")
